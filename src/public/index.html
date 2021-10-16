@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate_token</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            color: #1DB954;
+        }
+
+        main>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* position: relative; */
+        }
+
+        main>div>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        #btn {
+            padding: 1rem;
+            background: #fff;
+            color: #1DB954;
+            border: 1px solid #1DB954;
+            cursor: pointer;
+            flex: 1;
+            /* margin-left: 1rem; */
+        }
+
+        #btn:hover {
+            background: #1DB954;
+            color: #fff;
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div>
+            <img src="./spotify.png" alt="">
+            <div>
+                <form action="/login" method="GET">
+                    <button id="btn">Generate Access token from Spotify</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
