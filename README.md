@@ -18,7 +18,7 @@
 - The redirect uri must be:
 ``` <Your App url>/callback/```
 - Please make note of ```client_id```, ```client_secret``` and ```redirect_uri```.
-- After creating your app, create a ```.env``` file.
+- - After creating your app, create a ```.env``` file in the root folder of the project.
 
 ### Create ```.env``` file and add:
      SPOTIFY_CLIENT_ID = '<your spotify client id>'
