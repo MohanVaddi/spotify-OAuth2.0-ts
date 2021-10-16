@@ -16,7 +16,7 @@
      SPOTIFY_CLIENT_SECRET = '<your spotify client secret>'
      SPOTIFY_CLIENT_REFRESH_TOKEN = '<redirect uri>'
      APP_URI = '<url of your app with port included>'
-- Note: Incase of development server, your APP_URI will be http://localhost:3000/. but if you deployed it in heroku or any other platform, chane the APP_URI accordingly.
+- Note: Incase of development server, your APP_URI will be ```http://localhost:3000/```. but if you deployed it in heroku or any other platform, chane the APP_URI accordingly.
 
 ### To run:
 - Start script is already included in the ```package.json```, so run ```npm start``` to start the server:
