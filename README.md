@@ -1,17 +1,23 @@
 # Spotify Web api OAuth2.0 Authentication with TypeScript.
 - This project only covers the ```Authorization code``` workflow of OAuth2.0.
 
+
+### Note:
+- If you want this application to redirect the user to a given frontend application with a valid **access_token** as a parameter in the url, then change the **res** in **'/callback' and '/refresh_token'** routes in ```src/app.js```.
+
 ### Installation:
     $ npm install
+    
 ### Steps to acquire credentials from the spotify web api:
-- Register your app and get your own ```client_id``` and ```client_secret``` from the Spotify Developers Dashboard.
-- To do so, go to your Spotify for Developers Dashboard and create your application.
+- Register your app and get your own ```client_id``` and ```client_secret``` from the [Spotify Developers Dashboard](https://developer.spotify.com/dashboard/login).
+- To do so, go to your [Spotify Developers Dashboard](https://developer.spotify.com/dashboard/login) and create your application.
 - then registered Redirect URIs in the app settings,
 - the redirect uri must be:
 ``` <Your App url>/callback/```
 - please make a note of client_id, client_secret and redirect_uri.
 - Once you have created your app, create a ```.env``` file by following the below section.
-### create a ```.env``` file and add the following variables.
+- 
+### Create ```.env``` file and add:
      SPOTIFY_CLIENT_ID = '<your spotify client id>'
      SPOTIFY_CLIENT_SECRET = '<your spotify client secret>'
      SPOTIFY_CLIENT_REFRESH_TOKEN = '<redirect uri>'
