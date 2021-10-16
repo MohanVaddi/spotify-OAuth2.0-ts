@@ -1,5 +1,4 @@
 import axios from 'axios';
-// const axios = require('axios');
 
 export const getBase64Encoded = (url: string): string => {
     const converted = btoa(url);
@@ -29,13 +28,9 @@ const getToken = async (code: string) => {
             }
         );
         if (response.status === 200) {
-            console.log('success');
             return response;
-        } else {
-            console.log('Not working');
         }
     } catch (err) {
-        console.log('err');
         return err;
     }
 };

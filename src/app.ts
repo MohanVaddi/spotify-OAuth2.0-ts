@@ -32,16 +32,15 @@ app.get('/login', ({ res }) => {
 });
 
 let access_token = '';
-let refresh_token = process.env.SPOTIFY_CLIENT_REFRESH_TOKEN || null as string;
+let refresh_token =
+    process.env.SPOTIFY_CLIENT_REFRESH_TOKEN || (null as string);
 
 app.get('/callback', async (req, res) => {
     const code = req.query.code;
     console.log(`code: ${code}`);
     const response: any = await getToken(code as string);
-    console.log(response.data);
     access_token = response.data.access_token;
     refresh_token = response.data.refresh_token;
-
     if (response.status === 200) {
         res.redirect(
             `/access_token.html?access_token=${access_token}&refresh_token=${refresh_token}`
@@ -51,16 +50,15 @@ app.get('/callback', async (req, res) => {
     }
 });
 
+//if you get access_token successfully, you can visit this route to confirm the access_token.
+
 app.get('/user_data', async ({ res }) => {
     try {
         const response: any = await axios.get('https://api.spotify.com/v1/me', {
             headers: { Authorization: 'Bearer ' + access_token },
         });
-        console.log('object');
         res.send(response.data);
-        console.log(response.data);
     } catch (err: any) {
-        console.log(err.response.data);
         if (err.response.data.error.message === 'The access token expired') {
             res.redirect(refresh_token_uri);
         }
@@ -93,5 +91,5 @@ app.get('/refresh_token', async ({ res }) => {
 });
 
 app.listen(port, () => {
-    console.log('Server started in 3000');
+    console.log(`Server started in ${port}`);
 });
