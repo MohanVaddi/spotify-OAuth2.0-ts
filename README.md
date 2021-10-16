@@ -1,9 +1,12 @@
 # Spotify Web api OAuth2.0 Authentication with TypeScript.
 - This project only covers the ```Authorization code``` workflow of OAuth2.0.
-
-
 ### Note:
 - If you want this application to redirect the user to a given frontend application with a valid **access_token** as a parameter in the url, then change the **res** in **'/callback' and '/refresh_token'** routes in ```src/app.js```.
+
+<p align='center'>
+<img src='https://github.com/MohanVaddi/spotify-OAuth2.0-ts/blob/main/spotify_oauth2.0.gif' width='600px'>
+</p>
+
 
 ### Installation:
     $ npm install
